@@ -1,0 +1,35 @@
+namespace: ci/docker-build
+title: Docker build utility
+summary: Utility to build and push docker app
+description: |
+  Docker build and push utility
+type_tags:
+  - utility
+version: 1.0.1
+deps:
+  - docker-cli
+inputs:
+  - DOCKER_VERSION: ${VERSION}
+    opts:
+      title: Version of the app
+      is_dont_change_value: true
+  - DOCKERFILE_PATH: ${CI_DOCKERFILE_PATH}
+    opts:
+      title: 'Path to Dockerfile'
+      is_dont_change_value: false
+  - DOCKER_NAMESPACE: ${CI_PROJECT_NAMESPACE}
+    opts:
+      title: 'Git Branch to clone'
+      is_dont_change_value: true
+  - DOCKER_NAMESPACE: ${CI_PROJECT_BRANCH}
+    opts:
+      title: 'Git Branch to clone'
+      is_dont_change_value: true
+  - TOKEN: ${CI_PROJECT_TOKEN}
+    opts:
+      title: 'Git token'
+      is_dont_change_value: true
+  - CLONE_INTO_DIR: ${CI_PROJECT_PATH}
+    opts:
+      title: 'Git Branch to clone'
+      is_dont_change_value: true

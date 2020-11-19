@@ -1,0 +1,10 @@
+namespace: ci/scripts
+title: Scripting utility
+summary: Run any custom script you want. The power is in your hands. Use it wisely!
+description: |
+  Run any custom script you want as part of your omneedia build.
+type_tags:
+  - deploy
+  - utility
+  - build
+version: 1.0.1
