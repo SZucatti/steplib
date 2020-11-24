@@ -1,0 +1,15 @@
+namespace: ci/catalog
+title: Catalog utility
+type_tags:
+  - utility
+version: 1.0.1
+inputs:
+  - PATH: ${CI_PROJECT_PATH}
+    opts:
+      title: Directory to parse
+      required: true
+      is_dont_change_value: true
+outputs:
+  - FILES: null
+    opts:
+      title: Output files in directory

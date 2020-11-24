@@ -16,9 +16,21 @@ version: 1.0.1
 npm:
   - semver
 inputs:
-  - INC: ${CI_PROJECT_VERSION_INC}
+  - workdir: ${CI_PROJECT_PATH}
+    opts:
+      title: Working directory
+      description: |
+        Working directory of the step.
+        You can leave it empty to not change it.
+  - readonly: false
+  - inc: ${CI_PROJECT_VERSION_INC}
     opts:
       title: 'Version increment (patch,minor,major)'
+  - store: true
+    opts:
+      title: Store new version number inside package (yaml or json)
+      description: |
+        Auto detect package yaml or json to store version information
 outputs:
   - VERSION: null
     opts:
